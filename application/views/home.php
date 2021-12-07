@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Projeto</title>
+<title>Projeto CodeIgniter v1.0</title>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/estilos.css" rel="stylesheet">
 </head>
 <body>
-<h1>Home</h1>
-<p>Olá mundo!</p>
+
+<div class="container bg1"> 
+    <div class="row mt-5">
+        <div class="col-md-12">
+        <div class="jumbotron">
+            <h1>Olá Mundo!</h1>
+            <p>Projeto utilizando o Framework de Back-end Codeigniter.</p>
+        </div>
+        <p>Turma do Senac Tech - Desenvolvimento de Sistemas / Noite.</p>
+        <p>Porto Alegre - RS / Brasil - 2021.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
 </body>
 </html>
