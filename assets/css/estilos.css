@@ -1,5 +1,9 @@
 /* Estilos do Site */
 
+body {
+    background-color: floralwhite;
+}
+
 .bg1 {
     color: brown;
     background-color: gainsboro;

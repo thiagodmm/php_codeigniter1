@@ -12,7 +12,8 @@
         <div class="col-md-12">
         <div class="jumbotron">
             <h1>Olá Mundo!</h1>
-            <p>Projeto utilizando o Framework de Back-end Codeigniter.</p>
+            <h4>Jumbotron do Bootstrap</h4>
+            <p>Projeto utilizando o Framework de Back-end <strong>Codeigniter</strong> e <strong>Bootstrap</strong>.</p>
         </div>
         <p>Turma do Senac Tech - Desenvolvimento de Sistemas / Noite.</p>
         <p>Porto Alegre - RS / Brasil - 2021.</p>

@@ -79,6 +79,12 @@ $db['default'] = array(
 	'username' => 'root',
 	'password' => '',
 	'database' => 'dev3n201',
+
+    // 'hostname' => 'https://www.tmachado.com.br',
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'tmachado_dev3n201',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
