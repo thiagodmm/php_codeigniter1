@@ -14,15 +14,13 @@
             <h1>Olá Mundo!</h1>
             <h4>Jumbotron do Bootstrap</h4>
             <p>Projeto utilizando o Framework de Back-end <strong>Codeigniter</strong> e <strong>Bootstrap</strong>.</p>
+            <a href="<?php echo base_url(); ?>pessoa">Cadastro de Pessoa</a>
         </div>
         <p>Turma do Senac Tech - Desenvolvimento de Sistemas / Noite.</p>
         <p>Porto Alegre - RS / Brasil - 2021.</p>
         </div>
     </div>
 </div>
-
-
-
 
 </body>
 </html>
