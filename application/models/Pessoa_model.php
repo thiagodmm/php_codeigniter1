@@ -8,12 +8,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Description of Pessoa_model
  *
- * @author jairb
+ * @author Thiago de Moura Machado
  */
 class Pessoa_model extends CI_Model {
 
   function __construct() {
     parent::__construct();
+  }
+
+  function inserir($p) {
+    return $this->db->insert('pessoa',$p); //pessoa é o nome da tabela no banco
+  }
+
+  function deletar ($id) {
+      $this->db->where('idPessoa',$id);
+      return $this->db->delete('pessoa');
+
   }
 
   function listar() {
