@@ -9,6 +9,10 @@ body {
     background-color: gainsboro;
 }
 
+.table {
+    border-color: darkgray!important;
+}
+
 
 /* Para telas menores de 600 pixels */
 

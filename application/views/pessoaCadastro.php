@@ -10,61 +10,61 @@
 <div class="container bg1"> 
     <div class="row mt-5">
 
-        <div class="col-md-12 p-5">
+        <div class="col-md-12 p-4">
             <h1>Cadastro de Pessoa</h1>
             <br>
             <a href="<?php echo base_url(); ?>index.php">Voltar para Home</a><br>
         </div>
 
-        <div class="col-md-5 p-5">
+        <div class="col-md-5 p-4">
         <div class="jumbotron">
                 <!-- Formulário de Cadastro Pessoa -->
                 <?php echo form_open('pessoa/inserir'); ?>
 
-                <label for:"nome">Nome:<br>
+                <label for:"nome">Nome:&nbsp;
                 <input type="text" name="nome" required placeholder="Nome aqui...">
                 </label>
                 <br><br>
-                <label for:"telefone">Telefone:<br>
+                <label for:"telefone">Telefone:&nbsp;
                 <input type="tel" name="telefone" required placeholder="Telefone aqui...">
                 </label>
                 <br><br>
-                <label for:"email">E-mail:<br>
+                <label for:"email">E-mail:&nbsp;
                 <input type="email" name="email" required placeholder="E-mail aqui...">
                 </label>
                 <br><br>
-                <label for:"endereco">Endereço:<br>
+                <label for:"endereco">Endereço:&nbsp;
                 <input type="text" name="endereco" required placeholder="Endereço aqui...">
                 </label>
                 <br><br>
 
-                <label for:"tpPessoa">Tipo de Pessoa:<br>
-                <input type="radio" name="tpPessoa" required value="Fisica"> Física<br>
+                <label for:"tpPessoa">Tipo de Pessoa:&nbsp;
+                <input type="radio" name="tpPessoa" required value="Fisica"> Física&nbsp;
                 <input type="radio" name="tpPessoa" required value="Juridica"> Jurídica
                 </label>
 
                 <br><br>
-                <label for:"cpf">CPF:<br>
+                <label for:"cpf">CPF:&nbsp;
                 <input type="number" name="cpf" placeholder="CPF aqui...">
                 </label>
                 <br><br>
-                <label for:"sexo">Sexo:<br>
-                <input type="radio" name="sexo" value="F"> Feminino<br>
+                <label for:"sexo">Sexo:&nbsp;
+                <input type="radio" name="sexo" value="F"> Feminino&nbsp;
                 <input type="radio" name="sexo" value="M"> Masculino
                 </label>
                 <br><br>
 
-                <label for:"cnpj">CNPJ:<br>
+                <label for:"cnpj">CNPJ:&nbsp;
                 <input type="number" name="cnpj" placeholder="CNPJ aqui...">
                 </label>
                 <br><br>
-                <label for:"nomeFantasia">Nome Fantasia:<br>
+                <label for:"nomeFantasia">Nome Fantasia:&nbsp;
                 <input type="text" name="nomeFantasia" placeholder="Nome Fantasia aqui...">
                 </label>
                 <br><br>
 
                 <input type="submit" name="salvarPF" value="SALVAR">
-                <br><br>
+                &nbsp;&nbsp;
                 <input type="reset" name="limpar" value="LIMPAR">
 
                 <?php echo form_close(); ?>
@@ -75,7 +75,7 @@
 
         </div>
 
-        <div class="col-md-7 p-5">
+        <div class="col-md-7 p-4">
 
             <h4>Lista de Pessoas</h4>
             <br>

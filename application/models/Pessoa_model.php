@@ -23,7 +23,18 @@ class Pessoa_model extends CI_Model {
   function deletar ($id) {
       $this->db->where('idPessoa',$id);
       return $this->db->delete('pessoa');
+  }
 
+  function editar($idPessoa) {
+      $this->db->where('idPessoa',$idPessoa);
+      $result = $this->db->get('pessoa');
+      return $result->result();
+  }
+
+  function atualizar($data) {
+      $this->db->where('idPessoa',$data['idPessoa']);
+      $this->db->set($data);
+      return $this->db->update('pessoa');
   }
 
   function listar() {
