@@ -46,7 +46,35 @@ class Pessoa extends CI_Controller{
     public function excluir($id) {
         $result = $this->pessoa->deletar($id);
         redirect('pessoa');
-
         }
-    }
+
+        public function editar($idPessoa) {
+            $data['pessoa'] = $this->pessoa->editar($idPessoa);
+            $this->load->view('pessoaEditar',$data); 
+        }
+
+        public function atualizar() {
+            // Este é o lado do BD = Este é o lado da View
+            $dados['idPessoa'] = $this->input->post('idPessoa');
+            $dados['nome'] = $this->input->post('nome');
+            $dados['telefone'] = $this->input->post('telefone');
+            $dados['email'] = $this->input->post('email');
+            $dados['endereco'] = $this->input->post('endereco');
+            if($this->input->post('tpPessoa')=='Fisica') {
+                $dados['cpf'] = $this->input->post('cpf');
+                $dados['sexo'] = $this->input->post('sexo');
+            } else {
+                $dados['cnpj'] = $this->input->post('cnpj');
+                $dados['nomeFantasia'] = $this->input->post('nomeFantasia');
+            }
+            if ($this->pessoa->atualizar($dados) == true) {
+                $this->session->set_flashdata('true','msg');
+                redirect('pessoa');
+            } else {
+                $this->session->set_flashdata('err','msg');
+                redirect ('pessoa');
+            }
+        }
+
+}
 

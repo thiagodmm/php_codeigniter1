@@ -13,7 +13,7 @@
         <div class="col-md-12 p-4">
             <h1>Cadastro de Pessoa</h1>
             <br>
-            <a href="<?php echo base_url(); ?>index.php">Voltar para Home</a><br>
+            <a href="<?php echo base_url() . 'home'; ?>">Voltar para Home</a><br>
         </div>
 
         <div class="col-md-5 p-4">
@@ -94,6 +94,10 @@
                         <td><?php echo $pes->email; ?></td>
                         <td><?php echo $pes->telefone; ?></td>
                         <td>
+                        <a href="<?php echo base_url() .
+                            'pessoa/editar/' .
+                            $pes->idPessoa; ?>">Editar</a>
+                            &nbsp;|&nbsp;
                             <a href="<?php echo base_url() .
                             'pessoa/excluir/' .
                             $pes->idPessoa; ?>">Excluir</a>
