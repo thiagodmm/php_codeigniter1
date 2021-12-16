@@ -16,7 +16,7 @@
             <a href="<?php echo base_url() . 'home'; ?>">Voltar para Home</a><br>
         </div>
 
-        <div class="col-md-5 p-4">
+        <div class="col-md-4 p-4">
         <div class="jumbotron">
                 <!-- Formulário de Cadastro Pessoa -->
                 <?php echo form_open('pessoa/inserir'); ?>
@@ -75,7 +75,7 @@
 
         </div>
 
-        <div class="col-md-7 p-4">
+        <div class="col-md-8 p-4">
 
             <h4>Lista de Pessoas</h4>
             <br>
@@ -84,7 +84,7 @@
             <table class="table table-responsive">
             <thead>
                 <tr>
-                <th>Nome</th><th>E-mail</th><th>Telefone</th><th>Funções</th>
+                <th>Nome</th><th>E-mail</th><th>Telefone</th><th>Tipo de Pessoa</th><th>Funções</th>
                 </tr>
             </thead>
             <tbody>
@@ -93,6 +93,13 @@
                         <td><?php echo $pes->nome; ?></td>
                         <td><?php echo $pes->email; ?></td>
                         <td><?php echo $pes->telefone; ?></td>
+                        <td>
+                        <?php if(!is_null($pes->cpf)) {
+                            echo 'Pessoa Física';
+                        } else {
+                            echo 'Pessoa Jurídica';
+                        } ?>
+                        </td>
                         <td>
                         <a href="<?php echo base_url() .
                             'pessoa/editar/' .
