@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cadastro de Carro - Projeto CodeIgniter v1.0</title>
+<title>Cadastro de Veículo - Projeto CodeIgniter v1.0</title>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/css/estilos.css" rel="stylesheet">
 </head>
@@ -11,7 +11,7 @@
     <div class="row mt-5">
     
     <div class="col-md-12 p-4">
-            <h1>Cadastro de Carro</h1>
+            <h1>Cadastro de Veículo</h1>
             <br>
             <a href="<?php echo base_url() . 'home'; ?>">Voltar para Home</a><br>
     </div>
@@ -19,7 +19,7 @@
     <div class="col-md-4 p-4">
         <div class="jumbotron">
 
-        <!-- Formulário de Cadastro Pessoa -->
+        <!-- Formulário de Cadastro de Carro -->
         <?php echo form_open('carro/inserir'); ?>
 
         <label for:"cor">Cor:&nbsp;
@@ -39,14 +39,26 @@
             </label>
             <br><br>
         <label for:"portas">Portas:&nbsp;
-            <input type="text" name="portas" required placeholder="Portas aqui...">
-            </label>
-            <br><br>
-        <label for:"idPessoa">Id Pessoa:&nbsp;
-            <input type="text" name="idPessoa" required placeholder="Id Pessoa aqui...">
+            <input type="number" name="portas" required placeholder="Portas aqui...">
             </label>
             <br><br>
 
+        <!-- Select com For Each -->
+        <label for="cars">Proprietários:</label>
+
+        <select name="idPessoa">
+            <option>
+                Selecione
+            </option>
+            <?php foreach ($pessoas as $pes): ?>
+                <option value="<?php echo $pes->idPessoa; ?>">
+                    <?php echo $pes->nome; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+
+        <br><br>
+        
         <input type="submit" name="salvarPF" value="SALVAR">
         &nbsp;&nbsp;
         <input type="reset" name="limpar" value="LIMPAR">
@@ -60,13 +72,13 @@
 
     <div class="col-md-8 p-4">
     
-    <h4>Lista de Carros</h4>
+    <h4>Lista de Veículos</h4>
     <br>
     <!-- Tabela que apresenta a listagem de carros -->
     <table class="table table-responsive">
         <thead>
             <tr>
-            <th>Cor</th><th>Marca</th><th>Modelo</th><th>Placa</th><th>Portas</th><th>Id Pessoa</th><th>Funções</th>
+            <th>Cor</th><th>Marca</th><th>Modelo</th><th>Placa</th><th>Portas</th><th>Proprietário(a)</th><th>Funções</th>
             </tr>
         </thead>
 
@@ -77,8 +89,18 @@
                 <td><?php echo $car->marca; ?></td>
                 <td><?php echo $car->modelo; ?></td>
                 <td><?php echo $car->placa; ?></td>
-                <td><?php echo $car->portas; ?></td>
-                <td><?php echo $car->idPessoa; ?></td>
+                <td class="text-center"><?php echo $car->portas; ?></td>
+
+                <td>
+                <?php
+                foreach ($pessoas as $pes):
+                    if($pes->idPessoa==$car->idPessoa){
+                        echo $pes->nome;
+                        break;
+                    }
+                endforeach;
+                ?>
+                </td>
 
                 <td>
                     <a href="<?php echo base_url() .

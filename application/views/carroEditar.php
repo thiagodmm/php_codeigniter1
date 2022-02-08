@@ -12,8 +12,8 @@
         <div class="col-md-12 p-4 text-center">
 
             <h1>Editar Carro</h1>
-            <a href="<?php echo base_url() . 'carro'; ?>">Voltar</a>
-
+            <a href="<?php echo base_url() . 'carro'; ?>">Voltar</a><br>
+            <br>
             <!-- Formulário -->
 
             <?php echo form_open('carro/atualizar'); ?>
@@ -40,12 +40,25 @@
             <br><br>
 
             <label for:"portas">Portas:&nbsp;
-            <input type="text" name="portas" required value="<?php echo $carro[0]->portas; ?>">
+            <input type="number" name="portas" required value="<?php echo $carro[0]->portas; ?>">
             </label>
             <br><br>
 
-            <label for:"idPessoa">Id Pessoa:&nbsp;
-            <input type="text" name="idPessoa" required value="<?php echo $carro[0]->idPessoa; ?>">
+            <label for:"idPessoa">Proprietários:&nbsp;
+
+            <select name="idPessoa">
+            <option>
+                Selecione
+            </option>
+                <?php foreach ($pessoas as $pes): ?>
+                    <option value="<?php echo $pes->idPessoa; ?>"
+                    <?php if($pes->idPessoa == $carro[0]->idPessoa){
+                        echo 'selected';} ?> >
+                        <?php echo $pes->nome; ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            
             </label>
             <br><br>
 

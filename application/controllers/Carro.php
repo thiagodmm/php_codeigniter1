@@ -12,11 +12,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Carro extends CI_Controller{
     function __construct() {
         parent::__construct();
-        $this->load->model('Carro_model', 'carro'); //carro este é um apelido para o model
+        $this->load->model('Carro_model', 'carro'); // carro este é um apelido para o model
+        $this->load->model('Pessoa_model', 'pessoa'); // pessoa este é um apelido para o model
     }
 
     public function index() {
         $lista['carros'] = $this->carro->listar();
+        $lista['pessoas'] = $this->pessoa->listar();
         $this->load->view('carroCadastro', $lista);
     }
 
@@ -54,6 +56,7 @@ class Carro extends CI_Controller{
     
     public function editar($idCarro) {
         $data['carro'] = $this->carro->editar($idCarro);
+        $data['pessoas'] = $this->pessoa->listar();
         $this->load->view('carroEditar',$data); 
     }
 

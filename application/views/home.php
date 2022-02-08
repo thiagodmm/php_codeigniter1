@@ -17,7 +17,7 @@
             <br>
             <a href="<?php echo base_url(); ?>pessoa">Cadastro de Pessoa</a><br>
             <br>
-            <a href="<?php echo base_url(); ?>carro">Cadastro de Carro</a>
+            <a href="<?php echo base_url(); ?>carro">Cadastro de Veículo</a>
             <br>
             <br>
             <br>
