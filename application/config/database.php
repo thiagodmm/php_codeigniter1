@@ -75,15 +75,16 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'dev3n201',
 
-    // 'hostname' => 'https://www.tmachado.com.br',
+	// 'hostname' => 'localhost',
 	// 'username' => 'root',
 	// 'password' => '',
-	// 'database' => 'tmachado_dev3n201',
+	// 'database' => 'dev3n201',
+
+    'hostname' => '109.106.251.51',
+	'username' => 'tmachado_senac',
+	'password' => 'Port02022',
+	'database' => 'tmachado_dev3n201',
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

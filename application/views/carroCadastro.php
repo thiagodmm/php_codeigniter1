@@ -75,7 +75,8 @@
     <h4>Lista de Veículos</h4>
     <br>
     <!-- Tabela que apresenta a listagem de carros -->
-    <table class="table table-responsive">
+    <div class="table-responsive">
+    <table class="table">
         <thead>
             <tr>
             <th>Cor</th><th>Marca</th><th>Modelo</th><th>Placa</th><th>Portas</th><th>Proprietário(a)</th><th>Funções</th>
@@ -117,6 +118,7 @@
         </tbody>
     
     </table>
+    </div>
 
     </div>
 

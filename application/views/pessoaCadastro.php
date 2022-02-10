@@ -81,7 +81,8 @@
             <br>
 
             <!-- Tabela que apresenta a listagem de pessoas -->
-            <table class="table table-responsive">
+            <div class="table-responsive">
+            <table class="table">
             <thead>
                 <tr>
                 <th>Nome</th><th>E-mail</th><th>Telefone</th><th>Tipo de Pessoa</th><th>Funções</th>
@@ -113,6 +114,7 @@
                 <?php endforeach; ?>
             </tbody>
             </table>
+            </div>
 
         </div>
 
