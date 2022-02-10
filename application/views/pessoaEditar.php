@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<html lang="pt-br">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Editar Pessoa - Projeto CodeIgniter v1.0</title>
 <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="../../assets/css/estilos.css" rel="stylesheet">
