@@ -10,7 +10,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author Thiago de Moura Machado
  */
-
 class Carro_model extends CI_Model {
 
     function __construct() {
