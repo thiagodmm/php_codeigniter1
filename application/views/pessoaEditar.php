@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<html lang="pt-br">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Editar Pessoa - Projeto CodeIgniter v1.0</title>
-<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="../../assets/css/estilos.css" rel="stylesheet">
-</head>
-<body>
-
 <div class="container bg1"> 
     <div class="row mt-5">
         <div class="col-md-12 p-4 text-center">
@@ -85,6 +74,3 @@
             </div>
         </div>
     </div>
-
-</body>
-</html>

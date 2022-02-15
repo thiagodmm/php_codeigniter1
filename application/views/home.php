@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <html lang="pt-br">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projeto CodeIgniter v1.0</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/estilos.css" rel="stylesheet">
-</head>
-<body>
-
 <div class="container bg1"> 
     <div class="row mt-5">
         <div class="col-md-12 p-5">
             <div class="jumbotron">
+            <a class="btn btn-primary" href="<?php echo base_url();
+            ?>login/sair">Sair</a>
                 <h1>Página Inicial</h1>
                 <h4>CRUD em PHP: <small>Create, Read, Update e Delete</small>.</h4>
                 <p>Projeto utilizando o Framework de Back-end <strong>Codeigniter</strong> e <strong>Bootstrap</strong>.</p>
@@ -29,6 +20,3 @@
         </div>
     </div>
 </div>
-
-</body>
-</html>

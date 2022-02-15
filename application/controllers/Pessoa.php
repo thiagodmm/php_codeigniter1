@@ -12,12 +12,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Pessoa extends CI_Controller{
     function __construct() {
         parent::__construct();
+        if(!$this->session->userdata('estou_logado')){
+            redirect('Login');
+            }
         $this->load->model('Pessoa_model', 'pessoa'); //pessoa este é um apelido para o model
     }
 
     public function index() {
         $lista['pessoas'] = $this->pessoa->listar();
+        $this->load->view('template/header');
         $this->load->view('pessoaCadastro', $lista);
+        $this->load->view('template/footer');
     }
 
     public function inserir() {

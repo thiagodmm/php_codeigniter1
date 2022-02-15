@@ -1,65 +1,73 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/*
-*
-* Descrição de Usuario
-*
-* @author Thiago de Moura Machado
-*
-*/
+class Usuario extends CI_Controller {
 
-class Usuario extends CI_Controller{
     function __construct() {
         parent::__construct();
-        $this->load->model('Usuario_model', 'usuario'); //usuario é um apelido para o model
+        if (!$this->session->userdata('estou_logado')) {
+            redirect('Login');
+        }elseif($this->session->userdata('logado')->perfilAcesso!='admin'){
+            redirect('home');
+        }
+
+        $this->load->model('Usuario_model', 'user'); //Usuario_model é o nome do model e pessoa é uma alias(apelido)
     }
 
     public function index() {
-        $lista['usuarios'] = $this->usuario->listar();
+        $lista['users'] = $this->user->listar();
+        $this->load->view('template/header');
         $this->load->view('usuarioCadastro', $lista);
+        $this->load->view('template/footer');
     }
 
     public function inserir() {
-        // Nome no vetor deve ser o mesmo nome do campo na tabela
-        $dados['nomeUser'] = $this->input->post('nomeUser');
-        $dados['email'] = $this->input->post('email');
-        $dados['pas'] = $this->input->post('pas');
+        //nome dos dados no vetor devem ser os mesmos da tabela pessoa
+        $dados['nomeUsuario'] = $this->input->post('nomeUsuario');
+        $dados['user'] = $this->input->post('user');
+        $dados['senha'] = md5(mb_convert_case($this->input->post('senha'),MB_CASE_LOWER));
+        $dados['perfilAcesso'] = $this->input->post('perfilAcesso');
+        //chamando o método inserir($) do model usuario
+        $result = $this->user->inserir($dados);
 
-        $result = $this->usuario->inserir($dados);
-        if($result == true) {
-            $this->session->set_flashdata('true','msg');
+        if ($result == true) {
+            //redireciona para o controller user
             redirect('usuario');
         } else {
-            $this->session->set_flashdata('err','msg');
-            redirect ('usuario');
+            redirect('usuario');
+        }
+    }
+
+    public function editar($id) {
+        $dados['user'] = $this->user->editar($id);
+        $this->load->view('usuarioEditar', $dados);
+    }
+
+    public function atualizar() {
+        //este é o lado do BD = este é o lado do Form
+        //nome dos dados no vetor devem ser os mesmos da tabela pessoa
+        $dados['idusuario'] = $this->input->post('idusuario');
+        $dados['nomeUsuario'] = $this->input->post('nomeUsuario');
+        $dados['user'] = $this->input->post('user');
+        $dados['perfilAcesso'] = $this->input->post('perfilAcesso');
+
+        if ($this->user->atualizar($dados) == true) {
+            //falta implementar as msgs de notificações
+            redirect('usuario');
+        } else {
+            redirect('usuario');
         }
     }
 
     public function excluir($id) {
-        $result = $this->usuario->deletar($id);
-        redirect('usuario');
+        $result = $this->user->deletar($id);
+        if ($result == true) {
+            //redireciona para o controller usuario
+            redirect('usuario');
+        } else {
+            redirect('usuario');
         }
-
-        public function editar($idUser) {
-            $data['usuario'] = $this->usuario->editar($idUser);
-            $this->load->view('usuarioEditar',$data); 
-        }
-
-        public function atualizar() {
-            // Este é o lado do BD = Este é o lado da View
-            $dados['nomeUser'] = $this->input->post('nomeUSer');
-            $dados['email'] = $this->input->post('email');
-            $dados['pas'] = $this->input->post('pas');
-
-            if ($this->usuario->atualizar($dados) == true) {
-                $this->session->set_flashdata('true','msg');
-                redirect('usuario');
-            } else {
-                $this->session->set_flashdata('err','msg');
-                redirect ('usuario');
-            }
-        }
+    }
 
 }
-
