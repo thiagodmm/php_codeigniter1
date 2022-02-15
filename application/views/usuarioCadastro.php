@@ -1,7 +1,16 @@
+<div class="container bg1"> 
+    <div class="row mt-5">
 
-        <a href="<?php echo base_url() . 'home'; ?>">Home</a>
-        <h1>Cadastro de Usuário</h1>
-        <?php echo form_open('usuario/inserir'); ?>
+        <div class="col-md-12 p-4">
+            <h1>Cadastro de Novo Usuário</h1>
+            <br>
+            <a href="<?php echo base_url() . 'home'; ?>">Voltar para Home</a><br>
+        </div>
+
+        <div class="col-md-4 p-4">
+            <div class="jumbotron">
+
+            <?php echo form_open('usuario/inserir'); ?>
             <input type="text" required name="nomeUsuario" placeholder="Nome aqui..." />
             <br><br>
             <input type="text" required name="user" placeholder="User aqui..." />
@@ -14,8 +23,18 @@
             <input type="submit" value="Salvar"/>
             <input type="reset" value="Limpar"/>
         <?php echo form_close(); ?>
-        <h2>Lista Usuários</h2>
-        <table>
+
+            </div>
+        </div>
+
+        <div class="col-md-8 p-4">
+
+            <h4>Lista de Usuários</h4>
+            <br>
+
+            <!-- Tabela que apresenta a listagem de pessoas -->
+            <div class="table-responsive">
+            <table class="table">
             <thead>
                 <tr>
                     <th>Nome</th><th>user</th><th>Perfil Acesso</th><th>Funções</th>
@@ -41,3 +60,8 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        </div>
+        </div>
+
+    </div>
+</div>
