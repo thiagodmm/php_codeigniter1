@@ -69,7 +69,7 @@
     <br>
     <!-- Tabela que apresenta a listagem de carros -->
     <div class="table-responsive">
-    <table class="table" id="lista" class="display" style="width:100%">
+    <table class="table table-striped bgBranco" id="lista" class="display" style="width:100%">
         <thead>
             <tr>
             <th>Cor</th><th>Marca</th><th>Modelo</th><th>Placa</th><th>Portas</th><th>Proprietário(a)</th><th>Funções</th>

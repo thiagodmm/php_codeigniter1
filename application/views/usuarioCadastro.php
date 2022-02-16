@@ -11,18 +11,32 @@
             <div class="jumbotron">
 
             <?php echo form_open('usuario/inserir'); ?>
-            <input type="text" required name="nomeUsuario" placeholder="Nome aqui..." />
-            <br><br>
-            <input type="text" required name="user" placeholder="User aqui..." />
-            <br><br>
-            <input type="password" required name="senha" minlength="6" placeholder="Senha aqui..." />
-            <br><br>
-            <input type="radio" required name="perfilAcesso" value="admin"/>Administrador 
-            <input type="radio" required name="perfilAcesso" value="user" />Usuário
-            <br><br>
+
+            <div class="form-floating mb-3">
+                <input type="text" required name="nomeUsuario" class="form-control" id="nomeInput" placeholder="Nome aqui...">
+                <label for="nomeInput">Nome</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" required name="user" class="form-control" id="userInput" placeholder="Username aqui...">
+                <label for="userInput">Username</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="password" required name="senha" class="form-control" id="senhaInput" placeholder="Senha aqui...">
+                <label for="senhaInput">Senha</label>
+            </div>
+            
+            <br>
+
+            <input type="radio" required name="perfilAcesso" value="admin"/> Administrador<br>
+            <br> 
+            <input type="radio" required name="perfilAcesso" value="user" /> Usuário<br>
+            <br>
             <input type="submit" value="Salvar"/>
             <input type="reset" value="Limpar"/>
-        <?php echo form_close(); ?>
+
+            <?php echo form_close(); ?>
 
             </div>
         </div>
@@ -34,7 +48,7 @@
 
             <!-- Tabela que apresenta a listagem de pessoas -->
             <div class="table-responsive">
-            <table class="table" id="lista" class="display" style="width:100%">
+            <table class="table table-striped bgBranco" id="lista" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th>Nome</th><th>user</th><th>Perfil Acesso</th><th>Funções</th>
