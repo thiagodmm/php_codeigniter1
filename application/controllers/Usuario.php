@@ -41,7 +41,9 @@ class Usuario extends CI_Controller {
 
     public function editar($id) {
         $dados['user'] = $this->user->editar($id);
+        $this->load->view('template/header');
         $this->load->view('usuarioEditar', $dados);
+        $this->load->view('template/footer');
     }
 
     public function atualizar() {

@@ -11,9 +11,15 @@
         <!-- Estilos do Site -->
         <link rel="stylesheet" href="<?php echo base_url('assets/css/estilos.css'); ?>">
 
+        <!-- Data Tables CSS -->
+        <link rel="stylesheet" href="<?php echo base_url('assets/datatables/datatables.min.css'); ?>">
+ 
+        <!-- Data Tables JS -->
+        <script type="text/javascript" src="<?php echo base_url('assets/datatables/datatables.min.js'); ?>"></script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <title>Projeto CI3 + BS4</title>
+        <title>Projeto Crud PHP Codeigniter 3 | Bootstrap 5</title>
     </head>
     <body>
         <div class="container">

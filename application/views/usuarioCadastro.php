@@ -34,7 +34,7 @@
 
             <!-- Tabela que apresenta a listagem de pessoas -->
             <div class="table-responsive">
-            <table class="table">
+            <table class="table" id="lista" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th>Nome</th><th>user</th><th>Perfil Acesso</th><th>Funções</th>

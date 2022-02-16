@@ -55,7 +55,9 @@ class Pessoa extends CI_Controller{
 
         public function editar($idPessoa) {
             $data['pessoa'] = $this->pessoa->editar($idPessoa);
-            $this->load->view('pessoaEditar',$data); 
+            $this->load->view('template/header');
+            $this->load->view('pessoaEditar',$data);
+            $this->load->view('template/footer'); 
         }
 
         public function atualizar() {

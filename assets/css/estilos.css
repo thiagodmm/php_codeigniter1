@@ -13,11 +13,23 @@ body {
     border-color: darkgray!important;
 }
 
+.loginCard {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.bgBranco {
+    background-color: white;
+}
+
 
 /* Para telas menores de 600 pixels */
 
 @media screen and (max-width: 600px) {
 
-
+    .loginCard {
+        width: 100%;
+    }
 
 }
