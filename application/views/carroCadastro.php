@@ -51,10 +51,9 @@
         </select>
 
         <br><br>
-        
-        <input type="submit" name="salvarPF" value="SALVAR">
-        &nbsp;&nbsp;
-        <input type="reset" name="limpar" value="LIMPAR">
+
+        <button type="submit" name="salvarCarro" value="SALVAR" class="btn btn-info pr-2">Salvar</button>
+        <button type="reset" name="limpar" value="LIMPAR" class="btn btn-secondary">Limpar</button>
 
         <?php echo form_close(); ?>
         <br>

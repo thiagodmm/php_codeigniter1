@@ -5,13 +5,14 @@
 
             <div class="row mt-1 mb-5">
                 <div class="col-md-12 text-center">
-                <img src="<?php echo base_url('assets/img/logo_v2.png'); ?>" class="image image-responsive">
+                <img src="<?php echo base_url('assets/img/logo_v1.png'); ?>" class="image image-responsive logoDesktop">
+                <img src="<?php echo base_url('assets/img/logo_v2.png'); ?>" class="image image-responsive logoMobile">
                 </div>
             </div>
 
                 <div class="card loginCard">
                     <div class="card-header">
-                        <h2>Login</h2></div>
+                        <h3>Login</h3></div>
                     <div class="card-body">
                         <?php echo form_open('login/autenticar'); ?>
                         <div class="form-group">

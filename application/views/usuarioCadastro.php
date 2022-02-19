@@ -33,8 +33,9 @@
             <br> 
             <input type="radio" required name="perfilAcesso" value="user" /> Usuário<br>
             <br>
-            <input type="submit" value="Salvar"/>
-            <input type="reset" value="Limpar"/>
+
+            <button type="submit" value="Salvar" class="btn btn-info pr-2">Salvar</button>
+            <button type="reset" value="Limpar" class="btn btn-secondary">Limpar</button>
 
             <?php echo form_close(); ?>
 

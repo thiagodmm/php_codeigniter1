@@ -31,17 +31,18 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url(); ?>pessoa">Cadastrar Pessoa</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url(); ?>usuario">Cadastrar Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url(); ?>carro">Cadastrar Veículo</a>
+                        </li>
                         <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url(); ?>login/sair">Sair</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>pessoa">Pessoa</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>usuario">Usuário</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>carro">Carro</a>
                         </li>
                     </ul>
                     </div>

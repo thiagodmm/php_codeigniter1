@@ -1,12 +1,25 @@
 /* Estilos do Site */
 
 body {
-    background-color: floralwhite;
+    background-color: darkcyan;
+}
+
+.page-item.active .page-link {
+    background-color: #0dcaf0;
 }
 
 .logoLogin {
     display: block;
     margin: auto;
+}
+
+.logoDesktop {
+    display: block;
+    margin: auto;
+}
+
+.logoMobile {
+    display: none;
 }
 
 .bg1 {
@@ -35,6 +48,15 @@ body {
 
     .loginCard {
         width: 100%;
+    }
+
+    .logoDesktop {
+        display: none;
+    }
+    
+    .logoMobile {
+        display: block;
+        margin:  auto;
     }
 
 }
